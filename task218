@@ -1,0 +1,82 @@
+
+<!-- Q2  -->
+2-
+<?php
+$year = 2024; 
+
+if (($year % 4 == 0 && $year % 100 != 0) || $year % 400 == 0) {
+    echo "$year is a leap year";
+} else {
+    echo "$year is not a leap year";
+}
+?>
+
+3-
+<?
+$min = 1;
+$max = 100;
+$numCount = 10; // Change this to the desired number of unique random numbers
+
+$uniqueNumbers = array();
+while (count($uniqueNumbers) < $numCount) {
+    $randNum = rand($min, $max);
+    if (!in_array($randNum, $uniqueNumbers)) {
+        $uniqueNumbers[] = $randNum;
+    }
+}
+
+echo implode(', ', $uniqueNumbers);
+?>
+
+4-
+<?
+for ($i = 1; $i <= 5; $i++) {
+    for ($j = 1; $j <= 5; $j++) {
+        echo $i * $j . "\t";
+    }
+    echo "\n";
+}
+?>
+
+5-
+<?php
+$List = [1, 2, 2, 2, 3, 4, 4, 5, 6, 6];
+
+$uniqueList = array_unique($List);
+echo implode(', ', $uniqueList);
+?>
+
+6-
+<?php
+
+    class Dog {
+        public $name;
+    
+        public function __construct($name) {
+            $this->name = $name;
+        }
+    
+        public function greets() {
+            echo "woof";
+        }
+    
+        public function greetsAnother(Dog $another) {
+            echo "woooof";
+        }
+    
+        public function toString() {
+            return $this->name;
+        }
+    }
+    
+   
+    $dog1 = new Dog("bondo2");
+    $dog2 = new Dog("fero");
+    
+    $dog1->greets(); 
+    $dog2->greetsAnother($dog1);  
+    
+    echo $dog1->toString();  
+    ?>
+
+
